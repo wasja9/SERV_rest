@@ -11,11 +11,6 @@ import ALL.models.Token;
 public class TokenDto {
     private String value;
 
-   // public TokenDto(String value) {
-   // }
-
-
-
    public static TokenDto from(Token token) {
        return new TokenDto(token.getValue());
     }

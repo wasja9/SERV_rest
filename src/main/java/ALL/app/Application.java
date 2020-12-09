@@ -10,6 +10,8 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.web.servlet.config.annotation.CorsRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
 /**
  * Created by asu on 15.08.2020.
@@ -23,8 +25,15 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 //@EnableAutoConfiguration(exclude = SpringBootWebSecurityConfiguration.class)
 //<security.ignored=/**
 
-public class Application {
+public class Application  extends WebMvcConfigurerAdapter {
 
+    @Override
+
+    public void addCorsMappings(CorsRegistry registry) {
+        registry.addMapping("/**");
+        // .allowedOrigins("http://localhost:4200/test");
+        //.allowedMethods("*");
+    }
 
     @Bean
     public PasswordEncoder passwordEncoder(){

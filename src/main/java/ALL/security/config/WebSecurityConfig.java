@@ -18,7 +18,7 @@ import java.util.LinkedList;
  * @author Marsel Sidikov (First Software Engineering Platform)
  * @version 1.0
  */
-@ComponentScan("ru.ivmiit")
+@ComponentScan("ALL")
 @EnableWebSecurity
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
@@ -31,14 +31,19 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http
+
                 .addFilterBefore(tokenAuthFilter, BasicAuthenticationFilter.class)
                 .antMatcher("/**")
                 .authenticationProvider(authenticationProvider)
                 .authorizeRequests()
-                .antMatchers("/users/**").hasAuthority("ADMIN")
+
+                //.antMatchers("/users/**").hasAuthority("ADMIN")
                 .antMatchers("/users/**").hasAuthority("USER")
 
                 .antMatchers("/login").permitAll();
+
+               // .antMatchers("/**").permitAll();
+
         http.csrf().disable();
     }
 }

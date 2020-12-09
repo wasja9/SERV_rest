@@ -17,14 +17,18 @@ public class UserDto {
 
     private int id;
     private String login;
-   // private String firstName;
-    //private String lastName;
+    private String firstName;
+    private String lastName;
 
     //public UserDto(Long id, String login) {
    // }
 
     public static UserDto from(User user) {
-        return new UserDto(user.getId(),user.getLogin());
+        return new UserDto(
+                user.getId(),
+                user.getLogin(),
+                user.getFirstName(),
+                user.getLastName());
 
         //return new UserDto(id(user.getId()),login(user.getLogin()));
 
