@@ -25,7 +25,7 @@ import javax.persistence.*;
 public class Token {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private int id;
     private String value;
 
 
@@ -34,18 +34,13 @@ public class Token {
     }
 
 
-    public Token(long id, String value) {
-
-        this.id = id;
-        this.value = value;
-
-    }
+    public Token(int id, String value) {this.id = id;this.value = value;}
 
     @ManyToOne
     @JoinColumn(name = "user_id")
     private User user;
 
-
+    public Token( String value, User user) {this.value = value; this.user = user;}
 
     //public String getValue() {
    //     return value;
