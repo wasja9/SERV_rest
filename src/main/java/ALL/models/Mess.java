@@ -23,15 +23,14 @@ public class Mess {
 
     private int MsId;
 
-    private String MsMessege;
-    //private String Status;
+    //private String MsMessege;
+
+  //  private int ID_br;
+ //   private int ID_us;
 
 
 
 
 
 
-
-   // @OneToMany(mappedBy = "user")
-    //List<Token> tokens;
 }

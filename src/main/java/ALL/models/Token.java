@@ -28,17 +28,16 @@ public class Token {
     private int id;
     private String value;
 
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User user;
+
 
     public String getValue() {
         return value;
     }
 
-
     public Token(int id, String value) {this.id = id;this.value = value;}
-
-    @ManyToOne
-    @JoinColumn(name = "user_id")
-    private User user;
 
     public Token( String value, User user) {this.value = value; this.user = user;}
 

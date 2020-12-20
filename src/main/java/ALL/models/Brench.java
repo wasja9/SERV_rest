@@ -23,13 +23,14 @@ public class Brench {
 
     private int BrId;
 
-    private String BrName;
-    private String Status;
+   // private String BrName;
+   // private Data BrData;
 
-
-
-
-
+   // private int ID_pr;
+   // private int ID_us;
+   // private int ID_ms;
+   // private int ID_vd;
+   // private int ID_fil;
 
 
    // @OneToMany(mappedBy = "user")

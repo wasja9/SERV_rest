@@ -46,11 +46,6 @@ public class LoginServiceImpl implements LoginService {
             if (passwordEncoder.matches(loginForm.getPassword(), user.getHashPassword())) {
                 Token token = new Token(RandomStringUtils.random(10, true, true),user);
 
-                // Token token = Token.builder()
-               //         .user(user)
-               //         .value(RandomStringUtils.random(10, true, true))
-                //        .build();
-
                 tokensRepository.save(token);
                 return from(token);
             }

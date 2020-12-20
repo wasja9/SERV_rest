@@ -25,7 +25,12 @@ public class Projects {
     private int PrId;
 
     private String PrName;
-    private String PrStatus;
+    private String PrPart;
+    private Data PrData;
+
+    private int ID_us;
+
+
 
 
 

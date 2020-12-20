@@ -16,16 +16,6 @@ import static ALL.transfer.UserDto.from;
 
 import java.util.List;
 
-
-//import static ru.ivmiit.service.transfer.UserDto.from;
-
-/**
- * 25.04.2018
- * UsersController
- *
- * @author Sidikov Marsel (First Software Engineering Platform)
- * @version v1.0
- */
 @RestController
 public class UsersController {
 
@@ -33,24 +23,13 @@ public class UsersController {
     @Autowired
     private UsersService usersService;
 
-    //@GetMapping("/users")
-    // public List<User> getUsers(){
-    // return  usersService.findAll();}
-
-
     @GetMapping("/users")
      public List<UserDto> getUsers() {
-
             return from(usersService.findAll());
-      // return from(usersService.findAll());
- //   return UserDto.from(usersService.findAll());
-
      }
-
 
     @GetMapping("/users/{user-id}")
     public User getUser(@PathVariable("user-id") Long userId) {
-
         return usersService.findOne(userId);
     }
 
@@ -59,7 +38,6 @@ public class UsersController {
         usersService.signUp(userForm);
         return ResponseEntity.ok().build();
     }
-
 
 
 }

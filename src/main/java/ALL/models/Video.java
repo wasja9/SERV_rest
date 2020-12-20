@@ -23,8 +23,11 @@ public class Video {
 
     private int VidId;
 
-   // private String BrName;
-    //private String Status;
+   // private byte[] Vedeo;
+
+   // private int ID_br;
+   // private int ID_us;
+
 
 
 
