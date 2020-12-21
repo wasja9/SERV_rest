@@ -18,27 +18,33 @@ public class PrjServiceImpl implements PrjService {
     @Autowired
     private PrjRepository prjRepository;
 
-   // @Autowired
+    //@Autowired
     //private PasswordEncoder passwordEncoder;
-
-    @Override
-    public void signUp(ProjForm projForm) {
-       // String hashPassword = passwordEncoder.encode(userForm.getPassword());
-            Projects prj = new Projects(
-                    projForm.getPr_name(),
-                    projForm.getPr_Part()
-            );
-        prjRepository.save(prj);
-    }
 
     @Override
     public List<Projects> findAll() {
         return prjRepository.findAll();
     }
 
+
+    @Override
+    public void signUp(ProjForm projForm) {
+       // String hashPassword = passwordEncoder.encode(userForm.getPassword());
+            Projects prj = new Projects(
+                    //"maibah",
+                    //"mashina"
+                    projForm.getPrName(),
+                    projForm.getPrPart()
+            );
+        prjRepository.save(prj);
+    }
+
+/*
     @Override
     public Projects findOne(Long prjId) {
         System.out.println("OutPUT user="+prjId);
         return prjRepository.findOne(Math.toIntExact(prjId));
     }
+ */
+
 }

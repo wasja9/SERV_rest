@@ -14,9 +14,10 @@ import java.util.List;
  */
 
 public interface PrjService {
-    void signUp(ProjForm prjForm);
 
     List<Projects> findAll();
 
-    Projects findOne(Long prjId);
+    void signUp(ProjForm prjForm);
+
+    //Projects findOne(Long prjId);
 }

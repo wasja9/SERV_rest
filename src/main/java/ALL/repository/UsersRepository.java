@@ -11,10 +11,7 @@ import java.util.Optional;
  * Created by asu on 07.08.2020.
  */
 public interface UsersRepository extends JpaRepository<User,Integer> {
-    List<User> findAllByFirstName(String firstName);
-
+    //List<User> findAllByFirstName(String firstName);
     Optional<User> findOneByLogin(String login);
 
-
-   // User findOne(Long userId);
 }

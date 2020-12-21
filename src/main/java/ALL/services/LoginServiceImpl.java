@@ -40,7 +40,7 @@ public class LoginServiceImpl implements LoginService {
     public TokenDto login(LoginForm loginForm) {
         Optional<User> userCandidate = usersRepository.findOneByLogin(loginForm.getLogin());
 
-        if (userCandidate.isPresent()) {
+        if (userCandidate.isPresent()) {//isPresent-Метод позволяет выполнить какое-то действие, если объект не пустой
             User user = userCandidate.get();
 
             if (passwordEncoder.matches(loginForm.getPassword(), user.getHashPassword())) {

@@ -12,7 +12,7 @@ import java.util.stream.Collectors;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Builder
+//@Builder
 public class PrjDto {
 
     private int PrId;
@@ -28,7 +28,7 @@ public class PrjDto {
                 prj.getPrId(),
                 prj.getPrName(),
                 prj.getPrPart()
-        )
+        );
     }
 
     public static List<PrjDto> from(List<Projects> users) {

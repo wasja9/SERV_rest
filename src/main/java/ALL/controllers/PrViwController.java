@@ -25,15 +25,19 @@ public class PrViwController {
         return from(prjService.findAll());
     }
 
-    @GetMapping("/prj/{prj-id}")
-    public Projects getUser(@PathVariable("prj-id") Long prjId) {
-        return prjService.findOne(prjId);
-    }
-
-    @PostMapping("/users")
-    public ResponseEntity<Object> addPrj(@RequestBody ProjForm projForm) {
+        @PostMapping("/prj")
+      public ResponseEntity<Object> addPrj(@RequestBody ProjForm projForm) {
+      //  public ResponseEntity<Object> addPrj(ProjForm projForm) {
         prjService.signUp(projForm);
         return ResponseEntity.ok().build();
     }
+
+
+   // @GetMapping("/prj/{prj-id}")
+    //public Projects getUser(@PathVariable("prj-id") Long prjId) {
+   //     return prjService.findOne(prjId);
+    //}
+
+
 
 }

@@ -32,6 +32,8 @@ public class Projects {
     private int ID_us;
 
 
+
+
     public int getPrId() {return PrId;}
     public void setPrId(int prId) {  PrId = prId; }
     public String getPrName() {return PrName; }
@@ -39,12 +41,15 @@ public class Projects {
     public String getPrPart() {return PrPart;}
     public void setPrPart(String prPart) {PrPart = prPart;}
 
-    public Projects(String pr_name, String pr_part) {
-        this.PrName = pr_name;
-        this.PrPart = pr_part;
+   // public Projects(String prName, String prPart) {
+   //     this.PrName = prName;
+   //     this.PrPart = prPart;
+  //  }
+
+    public Projects(String prName, String prPart) {
+             this.PrName = prName;
+             this.PrPart = prPart;
     }
-
-
 
 
 
