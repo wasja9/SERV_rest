@@ -13,24 +13,28 @@ import javax.persistence.*;
 @Builder
 
 @Entity
-@Table(name = "Brench")
+@Table(name = "Files")
 
 
-public class Brench {
+public class Files {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
-    private int BrId;
+    private int FlId;
 
-    private String BrName;
-   // private Data BrData;
+  //  @Expose(serialize = false)
+    @Column(columnDefinition = "MEDIUMBLOB")
+    private byte[]File;
 
-    private int ID_pr;
+    private int ID_br;
     private int ID_us;
-    private int ID_ms;
-    private int ID_vd;
-    private int ID_fil;
+
+
+
+
+
+
 
 
    // @OneToMany(mappedBy = "user")

@@ -5,6 +5,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+
 import javax.persistence.*;
 
 @Data
@@ -23,10 +24,12 @@ public class Video {
 
     private int VidId;
 
-   // private byte[] Vedeo;
+  //  @Expose(serialize = false)
+    @Column(columnDefinition = "MEDIUMBLOB")
+    private byte[]Vedeo;
 
-   // private int ID_br;
-   // private int ID_us;
+    private int ID_br;
+    private int ID_us;
 
 
 

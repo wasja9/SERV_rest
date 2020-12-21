@@ -19,6 +19,8 @@ import java.util.List;
 
 public class Projects {
 
+
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
@@ -26,13 +28,21 @@ public class Projects {
 
     private String PrName;
     private String PrPart;
-    private Data PrData;
-
+   // private Data PrData;
     private int ID_us;
 
 
+    public int getPrId() {return PrId;}
+    public void setPrId(int prId) {  PrId = prId; }
+    public String getPrName() {return PrName; }
+    public void setPrName(String prName) {  PrName = prName;}
+    public String getPrPart() {return PrPart;}
+    public void setPrPart(String prPart) {PrPart = prPart;}
 
-
+    public Projects(String pr_name, String pr_part) {
+        this.PrName = pr_name;
+        this.PrPart = pr_part;
+    }
 
 
 

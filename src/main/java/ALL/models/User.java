@@ -100,10 +100,8 @@ public class User {
 
     }
     public User(int id, String login) {
-
         this.id = id;
         this.login = login;
-
     }
 
 

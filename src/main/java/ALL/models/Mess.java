@@ -23,10 +23,10 @@ public class Mess {
 
     private int MsId;
 
-    //private String MsMessege;
+    private String MsMessege;
 
-  //  private int ID_br;
- //   private int ID_us;
+    private int ID_br;
+    private int ID_us;
 
 
 
