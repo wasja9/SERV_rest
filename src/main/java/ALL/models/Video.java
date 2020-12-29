@@ -22,14 +22,14 @@ public class Video {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
-    private int VidId;
+    private int id;
 
   //  @Expose(serialize = false)
     @Column(columnDefinition = "MEDIUMBLOB")
-    private byte[]Vedeo;
+    private byte[] video;
 
-    private int ID_br;
-    private int ID_us;
+    private int id_br;
+    private int id_us;
 
 
 

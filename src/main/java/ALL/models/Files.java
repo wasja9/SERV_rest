@@ -21,14 +21,14 @@ public class Files {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
-    private int FlId;
+    private int id;
 
   //  @Expose(serialize = false)
     @Column(columnDefinition = "MEDIUMBLOB")
-    private byte[]File;
+    private byte[] file;
 
-    private int ID_br;
-    private int ID_us;
+    private int id_br;
+    private int id_us;
 
 
 

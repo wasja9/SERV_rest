@@ -33,8 +33,9 @@ public class PrjServiceImpl implements PrjService {
             Projects prj = new Projects(
                     //"maibah",
                     //"mashina"
-                    projForm.getPrName(),
-                    projForm.getPrPart()
+                    projForm.getName(),
+                    projForm.getPart(),
+                    projForm.getId_us()
             );
         prjRepository.save(prj);
     }

@@ -10,14 +10,20 @@ public  class ProjForm {
 
     //  private int PrId;
 
-    private String PrName;
-    private String PrPart;
+    private String name;
+    private String part;
 
     // private Data PrData;
-   // private int ID_us;
+    private int id_us;
 
+    public String getName() {
+        return name;
+    }
+    public String getPart() {
+        return part;
+    }
 
-    public String getPrName() {return PrName;}
-    public String getPrPart() {return PrPart;}
-
+    public int getId_us() {
+        return id_us;
+    }
 }

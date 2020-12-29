@@ -21,12 +21,12 @@ public class Mess {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
-    private int MsId;
+    private int id;
 
-    private String MsMessege;
+    private String messege;
 
-    private int ID_br;
-    private int ID_us;
+    private int id_br;
+    private int id_us;
 
 
 

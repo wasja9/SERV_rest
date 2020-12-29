@@ -15,23 +15,24 @@ import java.util.stream.Collectors;
 //@Builder
 public class PrjDto {
 
-    private int PrId;
+    private int id;
 
-    private String PrName;
-    private String PrPart;
+    private String name;
+    private String part;
     // private Data PrData;
-   // private int ID_us;
+    private int id_us;
 
 
     public static PrjDto from(Projects prj) {
         return new PrjDto(
-                prj.getPrId(),
-                prj.getPrName(),
-                prj.getPrPart()
+                prj.getId(),
+                prj.getName(),
+                prj.getPart(),
+                prj.getId_us()
         );
     }
 
-    public static List<PrjDto> from(List<Projects> users) {
-        return users.stream().map(PrjDto::from).collect(Collectors.toList());
+    public static List<PrjDto> from(List<Projects> projects) {
+        return projects.stream().map(PrjDto::from).collect(Collectors.toList());
     }
 }

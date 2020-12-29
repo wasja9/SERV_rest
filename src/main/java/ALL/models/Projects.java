@@ -24,34 +24,55 @@ public class Projects {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
-    private int PrId;
+    private int id;
 
-    private String PrName;
-    private String PrPart;
+    private String name;
+    private String part;
    // private Data PrData;
-    private int ID_us;
+    private int id_us;
 
 
 
+    public int getId() {
+        return id;
+    }
+    public void setId(int id) {
+        this.id = id;
+    }
+    public String getName() {
+        return name;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+    public String getPart() {
+        return part;
+    }
+    public void setPart(String part) {
+        this.part = part;
+    }
+    public int getId_us() {
+        return id_us;
+    }
+    public void setId_us(int id_us) {
+        this.id_us = id_us;
+    }
 
-    public int getPrId() {return PrId;}
-    public void setPrId(int prId) {  PrId = prId; }
-    public String getPrName() {return PrName; }
-    public void setPrName(String prName) {  PrName = prName;}
-    public String getPrPart() {return PrPart;}
-    public void setPrPart(String prPart) {PrPart = prPart;}
-
-   // public Projects(String prName, String prPart) {
+// public Projects(String prName, String prPart) {
    //     this.PrName = prName;
    //     this.PrPart = prPart;
   //  }
 
-    public Projects(String prName, String prPart) {
-             this.PrName = prName;
-             this.PrPart = prPart;
+    public Projects(String name, String part) {
+             this.name = name;
+             this.part = part;
     }
 
-
+    public Projects(String name, String part, int id_us) {
+        this.name = name;
+        this.part = part;
+        this.id_us=id_us;
+    }
 
    // @OneToMany(mappedBy = "user")
     //List<Token> tokens;

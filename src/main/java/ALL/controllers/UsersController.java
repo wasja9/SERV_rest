@@ -40,5 +40,11 @@ public class UsersController {
         return ResponseEntity.ok().build();
     }
 
+   // @PostMapping("/users/{user-id}")
+   // public User getUser(@PathVariable("user-id") Long userId) {
+   //     return usersService.findOne(userId);
+   // }
+
+
 
 }
