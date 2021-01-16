@@ -9,13 +9,6 @@ import ALL.forms.LoginForm;
 import ALL.services.LoginService;
 import ALL.transfer.TokenDto;
 
-/**
- * 25.04.2018
- * LoginController
- *
- * @author Sidikov Marsel (First Software Engineering Platform)
- * @version v1.0
- */
 @RestController
 public class LoginController {
 

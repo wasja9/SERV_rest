@@ -19,8 +19,6 @@ import java.util.List;
 
 public class Projects {
 
-
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 

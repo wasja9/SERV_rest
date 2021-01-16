@@ -11,7 +11,4 @@ import java.util.Optional;
  * Created by asu on 07.08.2020.
  */
 public interface PrjRepository extends JpaRepository<Projects,Integer> {
-    //List<Projects> findAllByFirstName(String firstName);
-    //Optional<Projects> findOneByPrName(String PrName);
-   // User findOne(Long userId);
 }

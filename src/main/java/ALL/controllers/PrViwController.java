@@ -1,7 +1,7 @@
 package ALL.controllers;
 
 import ALL.forms.ProjForm;
-import ALL.models.Projects;
+
 import ALL.services.PrjService;
 import ALL.transfer.PrjDto;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +21,7 @@ public class PrViwController {
     private PrjService prjService;
 
     @GetMapping("/prj")
-    public List<PrjDto> getUsers() {
+    public List<PrjDto> getPrj() {
         return from(prjService.findAll());
     }
 

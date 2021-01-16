@@ -12,7 +12,7 @@ import java.util.stream.Collectors;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-//@Builder
+
 public class PrjDto {
 
     private int id;
@@ -24,12 +24,14 @@ public class PrjDto {
 
 
     public static PrjDto from(Projects prj) {
-        return new PrjDto(
-                prj.getId(),
-                prj.getName(),
-                prj.getPart(),
-                prj.getId_us()
-        );
+        return new PrjDto
+                (
+                    prj.getId(),
+
+                    prj.getName(),
+                    prj.getPart(),
+                    prj.getId_us()
+                );
     }
 
     public static List<PrjDto> from(List<Projects> projects) {
