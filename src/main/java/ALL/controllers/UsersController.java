@@ -34,7 +34,6 @@ public class UsersController {
     }
 
     @PostMapping("/users")
-    //public ResponseEntity<Object> addUser(UserForm userForm) {
     public ResponseEntity<Object> addUser(@RequestBody UserForm userForm) {
         usersService.signUp(userForm);
         return ResponseEntity.ok().build();

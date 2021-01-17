@@ -29,9 +29,9 @@ public class Bren {
 
     private int id_pr;
     private int id_us;
-    private int id_ms;
-    private int id_vd;
-    private int id_fil;
+   // private int id_ms;
+   // private int id_vd;
+   // private int id_fil;
 
 
     // @OneToMany(mappedBy = "user")
@@ -68,24 +68,6 @@ public class Bren {
     public void setId_us(int id_us) {
         this.id_us = id_us;
     }
-    public int getId_ms() {
-        return id_ms;
-    }
-    public void setId_ms(int id_ms) {
-        this.id_ms = id_ms;
-    }
-    public int getId_vd() {
-        return id_vd;
-    }
-    public void setId_vd(int id_vd) {
-        this.id_vd = id_vd;
-    }
-    public int getId_fil() {
-        return id_fil;
-    }
-    public void setId_fil(int id_fil) {
-        this.id_fil = id_fil;
-    }
 
 
     public Bren(String name, String peck) {
@@ -93,7 +75,7 @@ public class Bren {
         this.peck = peck;
     }
 
-    public Bren(String name, String peck, int id_pr, int id_us, int id_ms, int id_vd, int id_fil) {
+    public Bren(String name, String peck, int id_pr, int id_us) {
        // this.id = id;
 
         this.name = name;
@@ -101,9 +83,7 @@ public class Bren {
 
         this.id_pr = id_pr;
         this.id_us = id_us;
-        this.id_ms = id_ms;
-        this.id_vd = id_vd;
-        this.id_fil = id_fil;
+
     }
 
 

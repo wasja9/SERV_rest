@@ -22,9 +22,9 @@ public class BrenchDto {
 
     private int id_pr;
     private int id_us;
-    private int id_ms;
-    private int id_vd;
-    private int id_fil;
+    //private int id_ms;
+    //private int id_vd;
+    //private int id_fil;
 
 
 public static BrenchDto from(Bren brn) {
@@ -36,10 +36,7 @@ public static BrenchDto from(Bren brn) {
                     brn.getPeck(),
 
                     brn.getId_pr(),
-                    brn.getId_us(),
-                    brn.getId_ms(),
-                    brn.getId_vd(),
-                    brn.getId_fil()
+                    brn.getId_us()
             );
 }
 
