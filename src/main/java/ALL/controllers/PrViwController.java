@@ -1,6 +1,7 @@
 package ALL.controllers;
 
 import ALL.forms.ProjForm;
+import ALL.forms.LoginForm;
 
 import ALL.services.PrjService;
 import ALL.transfer.PrjDto;
@@ -26,9 +27,9 @@ public class PrViwController {
     }
 
         @PostMapping("/prj")
-      public ResponseEntity<Object> addPrj(@RequestBody ProjForm projForm) {
+      public ResponseEntity<Object> addPrj(@RequestBody ProjForm projForm, LoginForm loginForm) {
       //  public ResponseEntity<Object> addPrj(ProjForm projForm) {
-        prjService.signUp(projForm);
+        prjService.signUp(projForm, loginForm);
         return ResponseEntity.ok().build();
     }
 
