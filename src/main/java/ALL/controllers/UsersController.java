@@ -37,6 +37,7 @@ public class UsersController {
     public ResponseEntity<Object> addUser(@RequestBody UserForm userForm) {
         usersService.signUp(userForm);
         return ResponseEntity.ok().build();
+        //return ResponseEntity.ok(loginService.login(loginForm));//обновление
     }
 
    // @PostMapping("/users/{user-id}")

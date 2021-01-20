@@ -29,7 +29,7 @@ public class PrViwController {
         @PostMapping("/prj")
       public ResponseEntity<Object> addPrj(@RequestBody ProjForm projForm, LoginForm loginForm) {
       //  public ResponseEntity<Object> addPrj(ProjForm projForm) {
-        prjService.signUp(projForm, loginForm);
+        prjService.signUp(projForm,loginForm);//, loginForm);
         return ResponseEntity.ok().build();
     }
 

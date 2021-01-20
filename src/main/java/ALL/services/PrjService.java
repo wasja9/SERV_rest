@@ -1,6 +1,7 @@
 package ALL.services;
 
 
+import ALL.forms.LoginForm;
 import ALL.forms.UserForm;
 import ALL.forms.ProjForm;
 import ALL.models.Projects;
@@ -19,7 +20,9 @@ public interface PrjService {
 
     List<Projects> findAll();
 
-    void signUp(ProjForm prjForm, UserForm userForm);
+    void signUp(ProjForm prjForm, LoginForm loginForm);
+
+   // void signUp(ProjForm projForm);
 
     //Projects findOne(Long prjId);
 }

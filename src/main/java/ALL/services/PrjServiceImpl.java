@@ -3,6 +3,7 @@ package ALL.services;
 
 import ALL.forms.LoginForm;
 import ALL.forms.ProjForm;
+import ALL.forms.UserForm;
 import ALL.models.Projects;
 //import ALL.models.role;
 //import ALL.models.state;
@@ -33,27 +34,39 @@ public class PrjServiceImpl implements PrjService {
         return prjRepository.findAll();
     }
 
-
     //@Override
+   // public void signUp(ProjForm prjForm, UserForm userForm) {
+
+   // }
+
+
+    @Override
     public void signUp(ProjForm projForm, LoginForm loginForm) {
        // String hashPassword = passwordEncoder.encode(userForm.getPassword());
 
         Optional<User> userCandidate = usersRepository.findOneByLogin(loginForm.getLogin());
 
+        User user = null;
         if (userCandidate.isPresent()) {//isPresent-Метод позволяет выполнить какое-то действие, если объект не пустой
-            User user = userCandidate.get();
+            user = userCandidate.get();
         }
 
+
+        user.setId(10);
         Projects prj = new Projects(
                     //"maibah",
                     //"mashina"
                     projForm.getName(),
                     projForm.getPart(),
-                projForm.getId_us()
+                //10
+                //user
+                user.getId()
+               // projForm.getId_us()
                 //this.user
             );
         prjRepository.save(prj);
     }
+
 
 /*
     @Override

@@ -16,7 +16,15 @@ public class LoginController {
     private LoginService loginService;
 
     @PostMapping("/login")
+    //ResponseEntity представляет полный HTTP-ответ: код состояния, заголовки и тело
+
+    //Если вы аннотируете метод с помощью @ResponseBody, Spring попытается преобразовать
+    // его возвращаемое значение и автоматически записать его в ответ http.
+    // Если вы аннотируете параметр методов с помощью @RequestBody, Spring на лету
+    // попытается преобразовать содержимое тела входящего запроса в ваш объект параметра
+
     public ResponseEntity<TokenDto> login(@RequestBody  LoginForm loginForm) {
-        return ResponseEntity.ok(loginService.login(loginForm));
+        return ResponseEntity.ok(loginService.login(loginForm));//обновление
+        //return ResponseEntity.
     }
 }
