@@ -20,9 +20,9 @@ public interface PrjService {
 
     List<Projects> findAll();
 
-    void signUp(ProjForm prjForm, LoginForm loginForm);
+   // void signUp(ProjForm prjForm, LoginForm loginForm);
 
-   // void signUp(ProjForm projForm);
+    void signUp(ProjForm projForm, String token);
 
     //Projects findOne(Long prjId);
 }

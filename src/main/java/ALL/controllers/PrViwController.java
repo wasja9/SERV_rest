@@ -27,9 +27,13 @@ public class PrViwController {
     }
 
         @PostMapping("/prj")
-      public ResponseEntity<Object> addPrj(@RequestBody ProjForm projForm, LoginForm loginForm) {
-      //  public ResponseEntity<Object> addPrj(ProjForm projForm) {
-        prjService.signUp(projForm,loginForm);//, loginForm);
+      //public ResponseEntity<Object> addPrj(@RequestBody ProjForm projForm, LoginForm loginForm) {
+        public ResponseEntity<Object> addPrj(@RequestBody ProjForm projForm,
+                                            @RequestParam String token//получаем токен
+                                            ) {
+            System.out.println(token);//Выводим значение токена
+
+        prjService.signUp(projForm,token);
         return ResponseEntity.ok().build();
     }
 

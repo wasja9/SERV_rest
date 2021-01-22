@@ -51,9 +51,7 @@ public class UsersServiceImpl implements UsersService {
 
     @Override
     public User findOne(Long userId) {
-
         System.out.println("OutPUT user="+userId);
-
         return usersRepository.findOne(Math.toIntExact(userId));
     }
 }

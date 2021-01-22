@@ -23,6 +23,8 @@ import javax.persistence.*;
 
 
 public class Token {
+
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
@@ -32,10 +34,10 @@ public class Token {
     @JoinColumn(name = "user_id")
     private User user;
 
+    public int getId() { return id; }
+    public String getValue() { return value; }
+    public User getUser() { return user; }
 
-    public String getValue() {
-        return value;
-    }
 
     public Token(int id, String value) {this.id = id;this.value = value;}
 
