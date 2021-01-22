@@ -16,7 +16,7 @@ public interface BrenchService {
 
     List<Bren> findAll();
 
-  //  void signUp(BrenchForm brenchForm);
+    void signUp(BrenchForm brenchForm, String token);
 
     //Projects findOne(Long prjId);
 }

@@ -42,7 +42,7 @@ public class LoginServiceImpl implements LoginService {
 
         if (userCandidate.isPresent()) {//isPresent-Метод позволяет выполнить какое-то действие, если объект не пустой
             User user = userCandidate.get();
-
+//Метод matches() — в Java сообщает, соответствует ли или нет данная строка заданному регулярному выражению
             if (passwordEncoder.matches(loginForm.getPassword(), user.getHashPassword())) {
                 Token token = new Token(RandomStringUtils.random(10, true, true),user);
 

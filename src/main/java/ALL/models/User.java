@@ -16,13 +16,18 @@ import java.util.List;
 @Entity
 @Table(name = "uses_all")
 
-
 public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-
     private int id;
+    //@OneToMany – указывает на связь один ко многим. Применяется с другой стороны от сущности с @ManyToOne
+    //mappedBy – обратная сторона связи сущности. Поле под этим атрибутом не сохраняется как часть исходной сущности в базе данных, но будет доступна по запросу. (см. ниже @JoinColumn)
+    //mappedBy указывает, что сущность на этой стороне является обратной связью, а владелец находится в" другой " сущности. Это также означает, что вы можете получить доступ к другой таблице из класса, который вы аннотировали с помощью " mappedBy "(полностью двунаправленный отношение.)
+    @OneToMany(mappedBy = "user")
+    List<Token> tokens;
+    //@OneToMany(mappedBy = "user")
+    //List<Projects> Projects;
 
     private String login;
     private String hashPassword;
@@ -42,7 +47,6 @@ public class User {
    //             .lastName(form.getLastName())
    //             .build();
    // }
-
 
     public int getId() {
         return id;
@@ -86,7 +90,6 @@ public class User {
         this.state = state;
     }
 
-
     public User(String login, String hashPassword, String firstName, String lastName, ALL.models.role role, ALL.models.state state) {
 
         this.login = login;
@@ -105,6 +108,5 @@ public class User {
     }
 
 
-    @OneToMany(mappedBy = "user")
-    List<Token> tokens;
+
 }

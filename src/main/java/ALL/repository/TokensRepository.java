@@ -13,6 +13,8 @@ import java.util.Optional;
  */
 public interface TokensRepository extends JpaRepository<Token, Long> {
      Optional<Token> findOneByValue(String value);
+     //Optional<Token> findOneById(String value);
+     //Optional<Token> findOneById(String value);
    // static int findOneByUser_id(String value);
 
 

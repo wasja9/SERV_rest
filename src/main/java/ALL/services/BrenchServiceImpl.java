@@ -4,6 +4,7 @@ package ALL.services;
 import ALL.forms.BrenchForm;
 import ALL.models.Bren;
 import ALL.repository.BrenchRepository;
+import ALL.repository.TokensRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,14 +16,27 @@ public class BrenchServiceImpl implements BrenchService{
     @Autowired
     private BrenchRepository brenchRepository;
 
-    //@Autowired
-    //private PasswordEncoder passwordEncoder;
+    @Autowired
+    private TokensRepository tokensRepository;
 
     @Override
     public List<Bren> findAll() {
         return brenchRepository.findAll();
     }
 
+    @Override
+    public void signUp(BrenchForm brenchForm, String token) {
+        //Optional<Token> token33 = tokensRepository.findOneByValue(token);
+        //System.out.println(token33.get().getValue());
+        Bren brn = new Bren(
+                brenchForm.getName(),
+                brenchForm.getPeck(),
+                //projForm.getName(),
+                //projForm.getPart(),
+                tokensRepository.findOneByValue(token).get().getUser().getId()
+        );
+        brenchRepository.save(brn);
+    }
 
  //   @Override
    // public void signUp(BrenchForm brenchForm) {
@@ -31,7 +45,7 @@ public class BrenchServiceImpl implements BrenchService{
                     //"maibah",
                     //"mashina"
     //                brenchForm.getName(),
-     //               brenchForm.getPeck()
+    //               brenchForm.getPeck()
     //        );
     //    brenchRepository.save(brn);
    // }

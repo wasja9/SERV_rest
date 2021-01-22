@@ -1,10 +1,11 @@
 package ALL.controllers;
 
+import ALL.forms.BrenchForm;
 import ALL.forms.ProjForm;
 import ALL.models.Bren;
 import ALL.models.Projects;
 import ALL.services.BrenchService;
-import ALL.services.PrjService;
+import ALL.services.BrenchService;
 import ALL.transfer.BrenchDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -27,6 +28,11 @@ public class BrenController {
         return from(brenchService.findAll());
     }
 
+    public ResponseEntity<Object> addPrj(@RequestBody BrenchForm brenchForm,
+                                         @RequestParam String token) { //получаем токен
+        brenchService.signUp(brenchForm,token);
+        return ResponseEntity.ok().build();
+    }
 
 
 
