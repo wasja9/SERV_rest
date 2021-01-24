@@ -33,7 +33,8 @@ public class BrenchServiceImpl implements BrenchService{
                 brenchForm.getPeck(),
                 //projForm.getName(),
                 //projForm.getPart(),
-                tokensRepository.findOneByValue(token).get().getUser().getId()
+               111,//id_prj
+                tokensRepository.findOneByValue(token).get().getUser().getId()//id_us
         );
         brenchRepository.save(brn);
     }

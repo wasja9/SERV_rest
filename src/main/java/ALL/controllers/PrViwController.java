@@ -27,7 +27,6 @@ public class PrViwController {
     }
 
     @PostMapping("/prj")
-
     public ResponseEntity<Object> addPrj(@RequestBody ProjForm projForm,
                                             @RequestParam String token) { //получаем токен
         prjService.signUp(projForm,token);

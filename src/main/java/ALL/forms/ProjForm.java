@@ -12,7 +12,6 @@ public  class ProjForm {
 
     private String name;
     private String part;
-
     // private Data PrData;
     private int id_us;
 
@@ -22,7 +21,6 @@ public  class ProjForm {
     public String getPart() {
         return part;
     }
-
     public int getId_us() {
         return id_us;
     }
