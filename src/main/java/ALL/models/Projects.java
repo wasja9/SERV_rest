@@ -25,7 +25,7 @@ public class Projects {
     private int id;
 
     private String name;
-    private String part;
+   // private String part;
    // private Data PrData;
     private int id_us;
 
@@ -43,12 +43,12 @@ public class Projects {
     public void setName(String name) {
         this.name = name;
     }
-    public String getPart() {
-        return part;
-    }
-    public void setPart(String part) {
-        this.part = part;
-    }
+  //  public String getPart() {
+  //      return part;
+  //  }
+  //  public void setPart(String part) {
+  //      this.part = part;
+  //  }
     public int getId_us() {
         return id_us;
     }
@@ -61,14 +61,14 @@ public class Projects {
    //     this.PrPart = prPart;
   //  }
 
-    public Projects(String name, String part) {
+    public Projects(String name) {
              this.name = name;
-             this.part = part;
+           //  this.part = part;
     }
 
-    public Projects(String name, String part, int id_us) {
+    public Projects(String name, int id_us) {
         this.name = name;
-        this.part = part;
+      //  this.part = part;
         this.id_us=id_us;
     }
 

@@ -24,6 +24,8 @@ public class Bren {
 
     private String name;
     private String peck;//Пакет
+    private int level; //Уровень
+  //  private String part;//
    // private Data data;
 
     private int id_pr;
@@ -32,10 +34,8 @@ public class Bren {
    // private int id_vd;
    // private int id_fil;
 
-
     // @OneToMany(mappedBy = "user")
     //List<Token> tokens;
-
 
     public int getId() {
         return id;
@@ -55,6 +55,8 @@ public class Bren {
     public void setPeck(String peck) {
         this.peck = peck;
     }
+    public int getLevel() {return level;}
+    public void setLevel(int level) {this.level = level;}
     public int getId_pr() {
         return id_pr;
     }
@@ -68,21 +70,20 @@ public class Bren {
         this.id_us = id_us;
     }
 
-
-    public Bren(String name, String peck) {
+    public Bren(String name, String peck, int level) {
         this.name = name;
         this.peck = peck;
+        this.level = level;
     }
 
-    public Bren(String name, String peck, int id_pr, int id_us) {
+    public Bren(String name, String peck, int level, int id_pr, int id_us) {
        // this.id = id;
-
         this.name = name;
         this.peck = peck;
+        this.level = level;
 
         this.id_pr = id_pr;
         this.id_us = id_us;
-
     }
 
 

@@ -31,6 +31,7 @@ public class BrenchServiceImpl implements BrenchService{
         Bren brn = new Bren(
                 brenchForm.getName(),
                 brenchForm.getPeck(),
+                brenchForm.getLevel(),
                 //projForm.getName(),
                 //projForm.getPart(),
                111,//id_prj

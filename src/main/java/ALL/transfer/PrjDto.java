@@ -18,7 +18,7 @@ public class PrjDto {
     private int id;
 
     private String name;
-    private String part;
+    //private String part;
     // private Data PrData;
     private int id_us;
 
@@ -29,7 +29,7 @@ public class PrjDto {
                     prj.getId(),
 
                     prj.getName(),
-                    prj.getPart(),
+                  //  prj.getPart(),
                     prj.getId_us()
                 );
     }

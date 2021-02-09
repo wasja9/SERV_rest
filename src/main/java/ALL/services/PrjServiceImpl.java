@@ -38,7 +38,7 @@ public class PrjServiceImpl implements PrjService {
         //System.out.println(token33.get().getValue());
         Projects prj = new Projects(
                     projForm.getName(),
-                    projForm.getPart(),
+                   // projForm.getPart(),
                     tokensRepository.findOneByValue(token).get().getUser().getId()
             );
         prjRepository.save(prj);

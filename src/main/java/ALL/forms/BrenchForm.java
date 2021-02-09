@@ -11,6 +11,7 @@ public  class BrenchForm {
 
     private String name;
     private String peck;//Пакет
+    private int level; //Уровень
 
     private int id_pr;
     private int id_us;
@@ -25,6 +26,7 @@ public  class BrenchForm {
     public String getPeck() {
         return peck;
     }
+    public int getLevel() {return level;}
 
     public int getId_pr() {
         return id_pr;
