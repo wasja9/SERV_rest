@@ -28,6 +28,7 @@ public class BrenController {
         return from(brenchService.findAll());
     }
 
+    @PostMapping("/brn")
     public ResponseEntity<Object> addPrj(@RequestBody BrenchForm brenchForm,
                                          @RequestParam String token) { //получаем токен
         brenchService.signUp(brenchForm,token);
