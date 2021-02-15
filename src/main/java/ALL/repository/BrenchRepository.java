@@ -12,6 +12,8 @@ import java.util.List;
  * Created by asu on 07.08.2020.
  */
 public interface BrenchRepository extends JpaRepository<Bren,Integer> {
+    @Query("select b from Bren b where b.name=:name")
+    List<Bren> findAllByName(@Param("name") String name);
 
     // Optional<Bren> findOneByLogin(String login);
     //@Query(value = "SELECT * FROM bren WHERE level=1", nativeQuery = true)
