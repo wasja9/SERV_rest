@@ -43,6 +43,13 @@ public class Prj_ServiceImpl implements Prj_Service {
         prj_Repository.save(pr);
     }
 
+   // @Override
+   // public List<prj> findAllById_root(int id_root) {
+   //     return prj_Repository.findAllById_root(id_root);
+   // }
+
+   // List<prj> findAllId_root(int id_root);
+
 
 
 }

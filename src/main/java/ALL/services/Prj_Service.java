@@ -22,5 +22,7 @@ public interface Prj_Service {
 
     void signUp(PrjForm prjForm, String token);
 
+   // List<prj> findAllById_root(int id_root);
+
     //Projects findOne(Long prjId);
 }

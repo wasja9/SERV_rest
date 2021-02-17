@@ -1,6 +1,7 @@
 package ALL.controllers;
 
 import ALL.forms.PrjForm;
+import ALL.models.User;
 import ALL.services.Prj_Service;
 import ALL.transfer.Prj_Dto;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,6 +32,11 @@ public class PrjController {
         prj_Service.signUp(prjForm,token);
         return ResponseEntity.ok().build();
     }
+
+   // @GetMapping("/pr/{id_root}")
+    //public User getPrAll(@PathVariable("id_root") int id_root) {
+    //    return prj_Service.findAllById_root(id_root);//.findOne(userId);
+    //}
 
 
    // @GetMapping("/prj/{prj-id}")
