@@ -27,7 +27,7 @@ public class Projects {
     private String name;
    // private String part;
    // private Data PrData;
-    private int id_us;
+    private int idus;
 
 
 
@@ -49,11 +49,11 @@ public class Projects {
   //  public void setPart(String part) {
   //      this.part = part;
   //  }
-    public int getId_us() {
-        return id_us;
+    public int getIdus() {
+        return idus;
     }
-    public void setId_us(int id_us) {
-        this.id_us = id_us;
+    public void setIdus(int idus) {
+        this.idus = idus;
     }
 
 // public Projects(String prName, String prPart) {
@@ -66,10 +66,10 @@ public class Projects {
            //  this.part = part;
     }
 
-    public Projects(String name, int id_us) {
+    public Projects(String name, int idus) {
         this.name = name;
       //  this.part = part;
-        this.id_us=id_us;
+        this.idus=idus;
     }
 
    // @OneToMany(mappedBy = "user")

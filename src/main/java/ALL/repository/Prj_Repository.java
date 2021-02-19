@@ -7,12 +7,18 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
 import java.util.List;
+import java.util.Optional;
 
 
 public interface Prj_Repository extends JpaRepository<prj,Integer> {
-   // Optional<User> findOneByLogin(String login);
+
+    List<prj> findAllByName(String name);
+    List<prj> findAllById(Integer id);//str
+    List<prj> findAllByStr(Integer str);
+    List<prj> findAllByIdus(Integer idus);//id_us
+
    //@Query("select b from Bren b where b.name=:name")
    //List<Bren> findAllByName(@Param("name") String name);
 
-   //List<prj> findAllbyId_root(Integer id_root);
+
 }

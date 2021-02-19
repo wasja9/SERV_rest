@@ -22,8 +22,8 @@ public class Prj_Dto {
     private int row;//порядковый номер объекта в конкретной строке
     /////////////////////////////////////////
     // private Data PrData;
-    private int id_root;
-    private int id_us;
+    private int idroot;
+    private int idus;
 
 
     public static Prj_Dto from(prj pr) {
@@ -34,8 +34,8 @@ public class Prj_Dto {
                     pr.getStr(),
                     pr.getNode(),
                     pr.getRow(),
-                    pr.getId_root(),
-                    pr.getId_us()
+                    pr.getIdroot(),
+                    pr.getIdus()
                 );
     }
 

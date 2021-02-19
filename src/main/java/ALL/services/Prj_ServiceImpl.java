@@ -25,6 +25,7 @@ public class Prj_ServiceImpl implements Prj_Service {
     @Override
     public List<prj> findAll() {
         return prj_Repository.findAll();
+        //return prj_Repository.
     }
 
 
@@ -37,16 +38,16 @@ public class Prj_ServiceImpl implements Prj_Service {
                     prjForm.getStr(),
                     prjForm.getNode(),
                     prjForm.getRow(),
-                    prjForm.getId_root(),
+                    prjForm.getIdroot(),
                     tokensRepository.findOneByValue(token).get().getUser().getId()
             );
         prj_Repository.save(pr);
     }
 
-   // @Override
-   // public List<prj> findAllById_root(int id_root) {
-   //     return prj_Repository.findAllById_root(id_root);
-   // }
+    @Override
+    public List<prj> findAllByIdroot(int idroot) {
+        return prj_Repository.findAllByIdus(idroot);
+    }
 
    // List<prj> findAllId_root(int id_root);
 

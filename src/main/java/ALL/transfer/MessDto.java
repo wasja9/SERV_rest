@@ -19,9 +19,9 @@ public class MessDto {
 
     private String messege;
 
-    private int id_us;
-    private int id_pr;
-    private int id_br;
+    private int idus;
+    private int idpr;
+    private int idbr;
 
 
     public static MessDto from(Mess ms) {
@@ -31,9 +31,9 @@ public class MessDto {
 
                     ms.getMessege(),
 
-                    ms.getId_us(),
-                    ms.getId_pr(),
-                    ms.getId_br()
+                    ms.getIdus(),
+                    ms.getIdpr(),
+                    ms.getIdbr()
             );
 }
 

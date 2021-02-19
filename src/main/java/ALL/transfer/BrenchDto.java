@@ -21,11 +21,11 @@ public class BrenchDto {
     private String peck;//Пакет
     private int level; //Уровень
 
-    private int id_pr;
-    private int id_us;
-    //private int id_ms;
-    //private int id_vd;
-    //private int id_fil;
+    private int idpr;
+    private int idus;
+    //private int idms;
+    //private int idvd;
+    //private int idfil;
 
 
 public static BrenchDto from(Bren brn) {
@@ -37,8 +37,8 @@ public static BrenchDto from(Bren brn) {
                     brn.getPeck(),
                     brn.getLevel(),
 
-                    brn.getId_pr(),
-                    brn.getId_us()
+                    brn.getIdpr(),
+                    brn.getIdus()
             );
 }
 

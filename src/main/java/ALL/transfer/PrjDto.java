@@ -20,7 +20,7 @@ public class PrjDto {
     private String name;
     //private String part;
     // private Data PrData;
-    private int id_us;
+    private int idus;
 
 
     public static PrjDto from(Projects prj) {
@@ -30,7 +30,7 @@ public class PrjDto {
 
                     prj.getName(),
                   //  prj.getPart(),
-                    prj.getId_us()
+                    prj.getIdus()
                 );
     }
 

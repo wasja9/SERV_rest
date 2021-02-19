@@ -20,9 +20,9 @@ public class FilDto {
     private byte[] file;
    // private String messege;
 
-    private int id_us;
-    private int id_pr;
-    private int id_br;
+    private int idus;
+    private int idpr;
+    private int idbr;
 
 
     public static FilDto from(Files fl) {
@@ -32,9 +32,9 @@ public class FilDto {
 
                     fl.getFile(),
 
-                    fl.getId_us(),
-                    fl.getId_pr(),
-                    fl.getId_br()
+                    fl.getIdus(),
+                    fl.getIdpr(),
+                    fl.getIdbr()
             );
 }
 

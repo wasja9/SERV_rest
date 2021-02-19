@@ -6,21 +6,21 @@ public class VidForm {
    // private int id;
     private byte[] video;
 
-    private int id_us;
-    private int id_pr;
-    private int id_br;
+    private int idus;
+    private int idpr;
+    private int idbr;
 
     public byte[] getVideo() {
         return video;
     }
-    public int getId_us() {
-        return id_us;
+    public int getIdus() {
+        return idus;
     }
-    public int getId_pr() {
-        return id_pr;
+    public int getIdpr() {
+        return idpr;
     }
-    public int getId_br() {
-        return id_br;
+    public int getIdbr() {
+        return idbr;
     }
 
 }

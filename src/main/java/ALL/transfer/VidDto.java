@@ -21,9 +21,9 @@ public class VidDto {
     //private String messege;
     private byte[] video;
 
-    private int id_us;
-    private int id_pr;
-    private int id_br;
+    private int idus;
+    private int idpr;
+    private int idbr;
 
 
     public static VidDto from(Video vd) {
@@ -33,9 +33,9 @@ public class VidDto {
 
                     vd.getVideo(),
 
-                    vd.getId_us(),
-                    vd.getId_pr(),
-                    vd.getId_br()
+                    vd.getIdus(),
+                    vd.getIdpr(),
+                    vd.getIdbr()
             );
 }
 

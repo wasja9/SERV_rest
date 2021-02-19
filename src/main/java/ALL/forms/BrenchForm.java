@@ -13,8 +13,8 @@ public  class BrenchForm {
     private String peck;//Пакет
     private int level; //Уровень
 
-    private int id_pr;
-    private int id_us;
+    private int idpr;
+    private int idus;
    // private int id_ms;
    // private int id_vd;
    // private int id_fil;
@@ -28,11 +28,11 @@ public  class BrenchForm {
     }
     public int getLevel() {return level;}
 
-    public int getId_pr() {
-        return id_pr;
+    public int getIdpr() {
+        return idpr;
     }
-    public int getId_us() {
-        return id_us;
+    public int getIdus() {
+        return idus;
     }
 
 }

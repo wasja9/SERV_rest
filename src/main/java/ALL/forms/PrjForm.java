@@ -15,14 +15,14 @@ public  class PrjForm {
     private int row;//порядковый номер объекта в конкретной строке
     /////////////////////////////////////////
     // private Data PrData;
-    private int id_root;
-    private int id_us;
+    private int idroot;
+    private int idus;
 
     public String getName() {return name;}
     public int getStr() { return str;  }
     public int getNode() { return node; }
     public int getRow() { return row; }
-    public int getId_root() {return id_root;}
-    public int getId_us() { return id_us; }
+    public int getIdroot() {return idroot;}
+    public int getIdus() { return idus; }
 
 }

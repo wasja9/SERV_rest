@@ -15,17 +15,7 @@ public interface BrenchRepository extends JpaRepository<Bren,Integer> {
     @Query("select b from Bren b where b.name=:name")
     List<Bren> findAllByName(@Param("name") String name);
 
-    // Optional<Bren> findOneByLogin(String login);
-    //@Query(value = "SELECT * FROM bren WHERE level=1", nativeQuery = true)
-   // List<Bren> findAllUserByBrenId(int level);
 
-// Optional<User> findOneByLogin(String login);
-    //@Query("SELECT c.fullname_client FROM Click c WHERE c.id_bannners = :idbanners AND c.fullname_client = :fullnameClient")
-    //String sent(@Param("fullname_client") String fullnameClient, @Param("id_banner") long idbanners);
-
-    //@Query("SELECT b FROM Bten b WHERE b.level:=level");
-    //(@Param("fullname_client") String fullnameClient, @Param("id_banner") long idbanners);
-    //List<Bren> findAllBrenLevel  (@Param("level") long level);
 
 }
 

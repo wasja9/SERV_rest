@@ -33,10 +33,10 @@ public class PrjController {
         return ResponseEntity.ok().build();
     }
 
-   // @GetMapping("/pr/{id_root}")
-    //public User getPrAll(@PathVariable("id_root") int id_root) {
-    //    return prj_Service.findAllById_root(id_root);//.findOne(userId);
-    //}
+    @GetMapping("/pr/{idroot}")
+    public List<Prj_Dto> getPr () {
+        return from(prj_Service.findAllByIdroot(1));//.findOne(userId);
+    }
 
 
    // @GetMapping("/prj/{prj-id}")
