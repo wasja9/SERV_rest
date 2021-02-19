@@ -28,16 +28,21 @@ public class PrjController {
 
     @PostMapping("/pr")
     public ResponseEntity<Object> addPrj(@RequestBody PrjForm prjForm,
-                                            @RequestParam String token) { //получаем токен
+                                         @RequestParam String token) { //получаем токен
         prj_Service.signUp(prjForm,token);
         return ResponseEntity.ok().build();
     }
 
-    @GetMapping("/pr/{idroot}")
-    public List<Prj_Dto> getPr () {
-        return from(prj_Service.findAllByIdroot(1));//.findOne(userId);
-    }
+   // @GetMapping("/pr/{idroot}")
+  //  public List<Prj_Dto> getPr () {
+ //       return from(prj_Service.findAllByIdroot(1));//.findOne(userId);
+   // }
 
+
+     @GetMapping("/pr/{idroot}")
+      public List<Prj_Dto> getPr (@PathVariable("idroot") Integer idroot) {
+           return from(prj_Service.findAllByIdroot(idroot));//.findOne(userId);
+     }
 
    // @GetMapping("/prj/{prj-id}")
     //public Projects getUser(@PathVariable("prj-id") Long prjId) {
