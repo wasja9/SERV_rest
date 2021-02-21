@@ -31,8 +31,8 @@ public class prj {
     private int row;//порядковый номер объекта в конкретной строке
     /////////////////////////////////////////
     // private Data PrData;
-    private int idroot;
-    private int idus;
+    private int idRoot;
+    private int idUs;
 
     public int getId() {return id; }
     public void setId(int id) { this.id = id;  }
@@ -44,10 +44,10 @@ public class prj {
     public void setNode(int node) {this.node = node;  }
     public int getRow() { return row; }
     public void setRow(int row) {  this.row = row;  }
-    public int getIdroot() { return idroot;  }
-    public void setIdroot(int idroot) {  this.idroot = idroot; }
-    public int getIdus() { return idus; }
-    public void setIdus(int idus) { this.idus = idus;  }
+    public int getIdRoot() { return idRoot;  }
+    public void setIdRoot(int idRoot) {  this.idRoot = idRoot; }
+    public int getIdUs() { return idUs; }
+    public void setIdUs(int idUs) { this.idUs = idUs;  }
 
     public prj() {}
 
@@ -56,13 +56,13 @@ public class prj {
         //  this.part = part;
     }
 
-    public prj(String name,int str,int node,int row,int idroot,int idus) {
+    public prj(String name,int str,int node,int row,int idRoot,int idUs) {
         this.name = name;
         this.str = str;
         this.node = node;
         this.row = row;
-        this.idroot = idroot;
-        this.idus=idus;
+        this.idRoot = idRoot;
+        this.idUs=idUs;
     }
 
 

@@ -33,7 +33,7 @@ public class Token {
     // @JoinColumn аннотации, указывает, что этот объект является владелец отношения (то есть: соответствующая таблица имеет столбец с внешним ключом к таблице, на которую ссылаются)
     //@JoinTable – указывает на связь с таблицей
     @ManyToOne
-    @JoinColumn(name = "userid")
+    @JoinColumn(name = "userId")
     private User user;
 
     public int getId() { return id; }

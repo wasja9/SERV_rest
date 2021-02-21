@@ -39,9 +39,9 @@ public class PrjController {
    // }
 
 
-     @GetMapping("/pr/{idroot}")
-      public List<Prj_Dto> getPr (@PathVariable("idroot") Integer idroot) {
-           return from(prj_Service.findAllByIdroot(idroot));//.findOne(userId);
+     @GetMapping("/pr/{idRoot}")
+      public List<Prj_Dto> getPr (@PathVariable("idRoot") Integer idRoot) {
+           return from(prj_Service.findAllByIdRoot(idRoot));//.findOne(userId);
      }
 
    // @GetMapping("/prj/{prj-id}")
