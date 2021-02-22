@@ -40,9 +40,16 @@ public class Prj_ServiceImpl implements Prj_Service {
                     prjForm.getNode(),
                     prjForm.getRow(),
                     prjForm.getIdRoot(),
-                    tokensRepository.findOneByValue(token).get().getUser().getId()
+                    tokensRepository.findOneByValue(token).get().getUser().getId(),
+                    prjForm.getIdNode()
             );
         prj_Repository.save(pr);
+    }
+
+    @Override
+    public List<prj> findAllByName(String name) {
+        System.out.println("input all Name:");
+        return prj_Repository.findAllByName(name);
     }
 
     @Override

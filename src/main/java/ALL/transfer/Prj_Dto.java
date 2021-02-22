@@ -24,6 +24,7 @@ public class Prj_Dto {
     // private Data PrData;
     private int idRoot;
     private int idUs;
+    private int idNode;
 
 
     public static Prj_Dto from(prj pr) {
@@ -35,7 +36,8 @@ public class Prj_Dto {
                     pr.getNode(),
                     pr.getRow(),
                     pr.getIdRoot(),
-                    pr.getIdUs()
+                    pr.getIdUs(),
+                    pr.getNode()
                 );
     }
 

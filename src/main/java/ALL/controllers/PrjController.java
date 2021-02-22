@@ -33,14 +33,14 @@ public class PrjController {
         return ResponseEntity.ok().build();
     }
 
-   // @GetMapping("/pr/{idroot}")
-  //  public List<Prj_Dto> getPr () {
- //       return from(prj_Service.findAllByIdroot(1));//.findOne(userId);
-   // }
+    @GetMapping("/prN/{name}")
+    public List<Prj_Dto> getPrjName (@PathVariable("name") String name) {
+        return from(prj_Service.findAllByName(name));//.findOne(userId);
+    }
 
 
-     @GetMapping("/pr/{idRoot}")
-      public List<Prj_Dto> getPr (@PathVariable("idRoot") Integer idRoot) {
+     @GetMapping("/prI/{idRoot}")
+      public List<Prj_Dto> getPrjIdRoot (@PathVariable("idRoot") Integer idRoot) {
            return from(prj_Service.findAllByIdRoot(idRoot));//.findOne(userId);
      }
 

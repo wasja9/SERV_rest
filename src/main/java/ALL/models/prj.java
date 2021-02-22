@@ -33,6 +33,7 @@ public class prj {
     // private Data PrData;
     private int idRoot;
     private int idUs;
+    private int idNode;
 
     public int getId() {return id; }
     public void setId(int id) { this.id = id;  }
@@ -48,6 +49,8 @@ public class prj {
     public void setIdRoot(int idRoot) {  this.idRoot = idRoot; }
     public int getIdUs() { return idUs; }
     public void setIdUs(int idUs) { this.idUs = idUs;  }
+    public int getIdNode() {  return idNode; }
+    public void setIdNode(int idNode) { this.idNode = idNode; }
 
     public prj() {}
 
@@ -56,13 +59,14 @@ public class prj {
         //  this.part = part;
     }
 
-    public prj(String name,int str,int node,int row,int idRoot,int idUs) {
+    public prj(String name,int str,int node,int row,int idRoot,int idUs, int idNode) {
         this.name = name;
         this.str = str;
         this.node = node;
         this.row = row;
         this.idRoot = idRoot;
         this.idUs=idUs;
+        this.idNode=idNode;
     }
 
 

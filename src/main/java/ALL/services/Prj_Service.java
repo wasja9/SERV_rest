@@ -22,6 +22,8 @@ public interface Prj_Service {
 
     void signUp(PrjForm prjForm, String token);
 
+    List<prj> findAllByName(String name);
+
     List<prj> findAllByIdRoot(int idRoot);
 
     //Projects findOne(Long prjId);

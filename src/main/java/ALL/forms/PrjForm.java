@@ -17,6 +17,7 @@ public  class PrjForm {
     // private Data PrData;
     private int idRoot;
     private int idUs;
+    private int idNode;
 
     public String getName() {return name;}
     public int getStr() { return str;  }
@@ -24,5 +25,5 @@ public  class PrjForm {
     public int getRow() { return row; }
     public int getIdRoot() {return idRoot;}
     public int getIdUs() { return idUs; }
-
+    public int getIdNode() { return idNode;  }
 }
