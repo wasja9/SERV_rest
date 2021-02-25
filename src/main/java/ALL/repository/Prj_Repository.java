@@ -22,7 +22,9 @@ public interface Prj_Repository extends JpaRepository<prj,Integer> {
   // @Query("select b from Bren b where b.name=:name")
   // List<Bren> findAllByName(@Param("name") String name);
 
+   // @Query(value = "SELECT * FROM prj WHERE id_node=(SELECT id_node FROM prj WHERE name=?1)", nativeQuery = true)
     @Query(value = "SELECT * FROM prj WHERE id_node=(SELECT id_node FROM prj WHERE name=?1 GROUP BY id_node)", nativeQuery = true)
+   // @Query(value = "SELECT TOP 1 * FROM prj WHERE id_node=(SELECT TOP 1 id_node FROM prj WHERE name=?1)", nativeQuery = true)
     List<prj> findAllByName(@Param("name") String name);
 
 

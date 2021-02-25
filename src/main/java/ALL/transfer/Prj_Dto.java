@@ -37,7 +37,7 @@ public class Prj_Dto {
                     pr.getRow(),
                     pr.getIdRoot(),
                     pr.getIdUs(),
-                    pr.getNode()
+                    pr.getIdNode()
                 );
     }
 
