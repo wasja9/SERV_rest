@@ -22,5 +22,7 @@ public interface MessService {
 
     void signUp(MessForm messForm, String token);
 
+    List<Mess> findAllById(int id);
+
     //Projects findOne(Long prjId);
 }

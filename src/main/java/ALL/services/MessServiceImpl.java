@@ -41,6 +41,13 @@ public class MessServiceImpl implements MessService{
         messRepository.save(ms);
     }
 
+    @Override
+    public List<Mess> findAllById(int id) {
+       // System.out.println("input all IdRoot:");
+        return messRepository.findAllById(id);
+        //return prj_Repository.findAllByIdRoot(1);
+    }
+
 
 
 }
