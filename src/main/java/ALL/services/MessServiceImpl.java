@@ -30,7 +30,7 @@ public class MessServiceImpl implements MessService{
     @Override
     public void signUp(MessForm messForm, String token) {
         //Optional<Token> token33 = tokensRepository.findOneByValue(token);
-        //System.out.println(token33.get().getValue());
+        System.out.println("MESSAGE: "+messForm.getMessege());
         Mess ms = new Mess(
                 messForm.getMessege(),
 
