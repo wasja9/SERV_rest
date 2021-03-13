@@ -14,5 +14,6 @@ import java.util.List;
     public interface MessRepository extends JpaRepository<Mess,Integer> {
         // Optional<User> findOneByLogin(String login);
         List<Mess> findAllById(Integer id);
+        List<Mess> findAllByIdbr(Integer idbr);
     }
 

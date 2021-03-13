@@ -24,5 +24,7 @@ public interface MessService {
 
     List<Mess> findAllById(int id);
 
+    List<Mess> findAllByIdbr(int idbr);
+
     //Projects findOne(Long prjId);
 }

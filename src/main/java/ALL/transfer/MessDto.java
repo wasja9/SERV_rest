@@ -1,6 +1,5 @@
 package ALL.transfer;
 
-import ALL.models.Bren;
 import ALL.models.Mess;
 import lombok.AllArgsConstructor;
 import lombok.Data;

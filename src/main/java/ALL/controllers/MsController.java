@@ -42,11 +42,15 @@ public class MsController {
         return ResponseEntity.ok().build();
     }
 
-    @GetMapping("/ms/{id}")
+    @GetMapping("/msID/{id}")
     public List<MessDto> getMessId (@PathVariable("id") Integer id) {
         return from(messService.findAllById(id));//.findOne(userId);
     }
 
+    @GetMapping("/msBR/{idbr}")
+    public List<MessDto> getMessIdbr (@PathVariable("idbr") Integer idbr) {
+        return from(messService.findAllByIdbr(idbr));//.findOne(userId);
+    }
 
 
 }

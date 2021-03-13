@@ -35,8 +35,8 @@ public class MessServiceImpl implements MessService{
                 messForm.getMessege(),
 
                 tokensRepository.findOneByValue(token).get().getUser().getId(),
-                111,
-                111
+                messForm.getIdpr(),
+                messForm.getIdbr()
                 );
         messRepository.save(ms);
     }
@@ -47,6 +47,15 @@ public class MessServiceImpl implements MessService{
         return messRepository.findAllById(id);
         //return prj_Repository.findAllByIdRoot(1);
     }
+
+    @Override
+    public List<Mess> findAllByIdbr(int idbr) {
+        // System.out.println("input all IdRoot:");
+        return messRepository.findAllById(idbr);
+        //return prj_Repository.findAllByIdRoot(1);
+    }
+
+
 
 
 
