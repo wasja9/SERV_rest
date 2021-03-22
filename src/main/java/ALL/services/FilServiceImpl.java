@@ -31,12 +31,15 @@ public class FilServiceImpl implements FilService{
         //Optional<Token> token33 = tokensRepository.findOneByValue(token);
         //System.out.println(token33.get().getValue());
         Files vd = new Files(
+                filRepository.findByIdMax()+1,//Формируем ервый ID для
+                //44,
                 // vidForm.getMessege(),
+                filForm.getPath(),
                 filForm.getFile(),
 
                 tokensRepository.findOneByValue(token).get().getUser().getId(),
-                111,
-                111
+                filForm.getIdpr(),
+                filForm.getIdbr()
         );
         filRepository.save(vd);
     }

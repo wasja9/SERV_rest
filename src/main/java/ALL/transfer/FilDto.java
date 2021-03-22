@@ -16,6 +16,7 @@ import java.util.stream.Collectors;
 public class FilDto {
 
     private int id;
+    private String path;
 
     private byte[] file;
    // private String messege;
@@ -29,7 +30,7 @@ public class FilDto {
     return new FilDto
             (
                     fl.getId(),
-
+                    fl.getPath(),
                     fl.getFile(),
 
                     fl.getIdus(),

@@ -38,17 +38,19 @@ public class PrjController {
         return from(prj_Service.findAllByName(name));//.findOne(userId);
     }
 
-
-     @GetMapping("/prI/{idRoot}")
+     @GetMapping("/prR/{idRoot}")
       public List<Prj_Dto> getPrjIdRoot (@PathVariable("idRoot") Integer idRoot) {
            return from(prj_Service.findAllByIdRoot(idRoot));//.findOne(userId);
      }
 
-   // @GetMapping("/prj/{prj-id}")
-    //public Projects getUser(@PathVariable("prj-id") Long prjId) {
-   //     return prjService.findOne(prjId);
-    //}
+    @GetMapping("/prI/{id}")
+    public List<Prj_Dto> getPrjId (@PathVariable("id") Integer id) {
+        return from(prj_Service.findAllById(id));//.findOne(userId);
+    }
 
-
+    @GetMapping("/prND/{idNode}")
+    public List<Prj_Dto> getPrjIdNode (@PathVariable("idNode") Integer idNode) {
+        return from(prj_Service.findAllByIdNode(idNode));//.findOne(userId);
+    }
 
 }

@@ -26,5 +26,9 @@ public interface Prj_Service {
 
     List<prj> findAllByIdRoot(int idRoot);
 
+    List<prj> findAllById(int id);
+
+    List<prj> findAllByIdNode(int idNode);
+
     //Projects findOne(Long prjId);
 }

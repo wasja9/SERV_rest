@@ -10,7 +10,7 @@ import javax.persistence.*;
 
 @Data
 @NoArgsConstructor
-@AllArgsConstructor
+//@AllArgsConstructor
 @Builder
 
 @Entity
@@ -20,8 +20,9 @@ import javax.persistence.*;
 public class Video {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    //@GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+    private String path;
 
   //  @Expose(serialize = false)
     @Column(columnDefinition = "MEDIUMBLOB")
@@ -33,6 +34,8 @@ public class Video {
 
     public int getId() {return id;}
     public void setId(int id) {this.id = id;}
+    public String getPath() {  return path;  }
+    public void setPath(String path) { this.path = path; }
     public byte[] getVideo() {return video;}
     public void setVideo(byte[] video) {this.video = video;}
     public int getIdus() {return idus; }
@@ -42,7 +45,9 @@ public class Video {
     public int getIdbr() {return idbr;}
     public void setIdbr(int idbr) {this.idbr = idbr;}
 
-  public Video(byte[] video, int idus, int idpr, int idbr) {
+  public Video(int id,String path, byte[] video, int idus, int idpr, int idbr) {
+    this.id = id;
+    this.path = path;
     this.video = video;
     this.idus = idus;
     this.idpr = idpr;

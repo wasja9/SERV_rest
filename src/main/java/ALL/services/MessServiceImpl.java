@@ -15,6 +15,7 @@ import java.util.List;
 
 @Service
 public class MessServiceImpl implements MessService{
+    String TM;
 
     @Autowired
     private MessRepository messRepository;
@@ -32,6 +33,8 @@ public class MessServiceImpl implements MessService{
         //Optional<Token> token33 = tokensRepository.findOneByValue(token);
         System.out.println("MESSAGE: "+messForm.getMessege());
         Mess ms = new Mess(
+                messRepository.findByIdMax()+1,//Формируем ервый ID для
+
                 messForm.getMessege(),
 
                 tokensRepository.findOneByValue(token).get().getUser().getId(),
@@ -50,13 +53,15 @@ public class MessServiceImpl implements MessService{
 
     @Override
     public List<Mess> findAllByIdbr(int idbr) {
-        // System.out.println("input all IdRoot:");
-        return messRepository.findAllById(idbr);
-        //return prj_Repository.findAllByIdRoot(1);
+        return messRepository.findAllByIdbr(idbr);
     }
 
-
-
+   // @Override
+   // public Mess findByIdMax() {
+        //return messRepository.findByIdMax();
+    //    System.out.println(messRepository.findByIdMax());
+   //     return null;
+  //  }
 
 
 }

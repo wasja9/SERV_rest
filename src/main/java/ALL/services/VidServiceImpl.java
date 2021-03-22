@@ -34,12 +34,15 @@ public class VidServiceImpl implements VidService{
         //Optional<Token> token33 = tokensRepository.findOneByValue(token);
         //System.out.println(token33.get().getValue());
         Video vd = new Video(
-               // vidForm.getMessege(),
+                //44,
+                vidRepository.findByIdMax()+1,//Формируем ервый ID для
+                // vidForm.getMessege(),
+                vidForm.getPath(),
                 vidForm.getVideo(),
 
                 tokensRepository.findOneByValue(token).get().getUser().getId(),
-                111,
-                111
+                vidForm.getIdpr(),
+                vidForm.getIdbr()
         );
         vidRepository.save(vd);
     }

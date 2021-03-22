@@ -17,7 +17,7 @@ import java.util.stream.Collectors;
 public class VidDto {
 
     private int id;
-
+    private String path;
     //private String messege;
     private byte[] video;
 
@@ -30,7 +30,7 @@ public class VidDto {
     return new VidDto
             (
                     vd.getId(),
-
+                    vd.getPath(),
                     vd.getVideo(),
 
                     vd.getIdus(),

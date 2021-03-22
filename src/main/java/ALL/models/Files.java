@@ -9,7 +9,7 @@ import javax.persistence.*;
 
 @Data
 @NoArgsConstructor
-@AllArgsConstructor
+//@AllArgsConstructor
 @Builder
 
 @Entity
@@ -19,9 +19,9 @@ import javax.persistence.*;
 public class Files {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-
+    //@GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+    private String path;
 
   //  @Expose(serialize = false)
     @Column(columnDefinition = "MEDIUMBLOB")
@@ -33,6 +33,8 @@ public class Files {
 
     public int getId() { return id;}
     public void setId(int id) {this.id = id;}
+    public String getPath() {  return path;  }
+    public void setPath(String path) { this.path = path; }
     public byte[] getFile() {return file;}
     public void setFile(byte[] file) {this.file = file;}
     public int getIdus() {return idus;}
@@ -45,7 +47,9 @@ public class Files {
 // @OneToMany(mappedBy = "user")
     //List<Token> tokens;
 
-  public Files(byte[] file, int idus, int idpr, int idbr) {
+  public Files(int id, String path, byte[] file, int idus, int idpr, int idbr) {
+    this.id = id;
+    this.path = path;
     this.file = file;
     this.idus = idus;
     this.idpr = idpr;

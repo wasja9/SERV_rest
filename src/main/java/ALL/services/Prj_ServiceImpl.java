@@ -48,14 +48,28 @@ public class Prj_ServiceImpl implements Prj_Service {
 
     @Override
     public List<prj> findAllByName(String name) {
-        System.out.println("input all Name:");
+        //System.out.println("input all Name:");
         return prj_Repository.findAllByName(name);
     }
 
     @Override
     public List<prj> findAllByIdRoot(int idRoot) {
-        System.out.println("input all IdRoot:");
+        //System.out.println("input all IdRoot:");
         return prj_Repository.findAllByIdRoot(idRoot);
+        //return prj_Repository.findAllByIdRoot(1);
+    }
+
+    @Override
+    public List<prj> findAllById(int id) {
+        //System.out.println("input all IdRoot:");
+        return prj_Repository.findAllById(id);
+        //return prj_Repository.findAllByIdRoot(1);
+    }
+
+    @Override
+    public List<prj> findAllByIdNode(int idNode) {
+        //System.out.println("input all IdRoot:");
+        return prj_Repository.findAllByIdNode(idNode);
         //return prj_Repository.findAllByIdRoot(1);
     }
 

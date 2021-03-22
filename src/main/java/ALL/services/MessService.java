@@ -19,12 +19,12 @@ public interface MessService {
 
     List<Mess> findAll();
 
-
     void signUp(MessForm messForm, String token);
 
     List<Mess> findAllById(int id);
 
     List<Mess> findAllByIdbr(int idbr);
 
-    //Projects findOne(Long prjId);
+   // Mess findByIdMax();
+
 }
