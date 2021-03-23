@@ -10,6 +10,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import org.springframework.web.multipart.MultipartFile;
+
 import java.util.List;
 
 import static ALL.transfer.FilDto.from;
@@ -34,7 +36,9 @@ public class FilController {
 
     @PostMapping("/fl")
     public ResponseEntity<Object> addFl(@RequestBody FilForm filForm,
-                                        @RequestParam String token) { //получаем токен
+                                        @RequestParam String token,
+                                        @RequestParam("file") MultipartFile file
+                                        ) { //получаем токен
         filService.signUp(filForm,token);
         return ResponseEntity.ok().build();
     }
